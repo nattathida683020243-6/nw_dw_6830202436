@@ -6,7 +6,7 @@ E + L ของ ELT: อ่านไฟล์ CSV ของ Northwind จาก 
 
     python scripts/data_extract.py
 
-ผลลัพธ์: ไฟล์ northwind.duckdb ที่มี schema ชื่อ raw และตาราง 7 ตาราง
+ผลลัพธ์: ไฟล์ northwind.duckdb ที่มี schema ชื่อ raw และตาราง 9 ตาราง
 รันซ้ำได้กี่ครั้งก็ได้ (CREATE OR REPLACE) ผลลัพธ์เหมือนเดิมทุกครั้ง
 """
 
@@ -30,6 +30,9 @@ SOURCES = {
     "products": "raw/products.csv",
     "shippers": "raw/shippers.csv",
     "suppliers": "raw/suppliers.csv",
+    # แหล่ง A: ใบสั่งซื้อและรายการสินค้า
+    "orders": "raw/orders.csv",
+    "order_details": "raw/order_details.csv",
     # แหล่ง B: ระบบขายเดิม (มีเฉพาะใบสั่งซื้อและรายการสินค้า)
     "legacy_orders": "legacy/orders.csv",
     "legacy_order_details": "legacy/order_details.csv",
